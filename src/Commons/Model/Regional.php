@@ -7,6 +7,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Snairbef\Regional\Concerns\HasSearch;
 use Snairbef\Regional\Models\Scopes\StatusScope;
 
+/**
+ * Regional abstract class
+ *
+ * @property int $id
+ * @property string $name
+ * @property bool $status
+ */
 abstract class Regional extends Model
 {
     use HasSearch, SoftDeletes;
