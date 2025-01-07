@@ -15,9 +15,4 @@ class ProvinceRepository extends Repository implements Contract
     {
         parent::__construct($province);
     }
-
-    public function withRegencies()
-    {
-        return $this->with(['regencies']);
-    }
 }

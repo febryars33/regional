@@ -6,7 +6,4 @@ use Snairbef\Regional\Commons\Repository\Interface\RepositoryInterface as Reposi
 use Snairbef\Regional\Contracts\WithPagination;
 use Snairbef\Regional\Contracts\WithSearch;
 
-interface ProvinceRepository extends Repository, WithPagination, WithSearch
-{
-    public function withRegencies();
-}
+interface ProvinceRepository extends Repository, WithPagination, WithSearch {}
