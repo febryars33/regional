@@ -31,7 +31,7 @@ abstract class Regional extends Model
     /**
      * The attributes that should be cast.
      *
-     * @var array
+     * @var array<string, string>
      */
     protected $casts = [
         'status' => 'boolean',

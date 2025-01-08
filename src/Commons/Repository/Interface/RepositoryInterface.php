@@ -6,6 +6,7 @@ use Illuminate\Contracts\Database\Query\Expression;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use LogicException;
 
 interface RepositoryInterface
@@ -36,11 +37,6 @@ interface RepositoryInterface
      * @throws ModelNotFoundException
      */
     public function findOrFail(int $id, array $with = [], array|string $columns = ['*']): Model;
-
-    /**
-     * Find a model by its primary key, including soft deleted models.
-     */
-    public function findWithTrash(int $id): ?Model;
 
     /**
      * Save a new model and return the instance.

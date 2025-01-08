@@ -60,7 +60,7 @@ abstract class Reader
      */
     public function import(array $value): bool
     {
-        return $this->model::query()->insertOrIgnore($value);
+        return boolval($this->model::query()->insertOrIgnore($value));
     }
 
     /**

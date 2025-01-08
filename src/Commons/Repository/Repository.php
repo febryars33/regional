@@ -67,14 +67,6 @@ class Repository implements RepositoryInterface
     }
 
     /**
-     * Find a model by its primary key, including soft deleted models.
-     */
-    public function findWithTrash(int $id): ?Model
-    {
-        return $this->model::query()->withTrashed()->find($id);
-    }
-
-    /**
      * Save a new model and return the instance.
      */
     public function create(array $attributes = []): Model
