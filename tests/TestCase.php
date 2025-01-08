@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace Snairbef\Regional\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use VendorName\Skeleton\SkeletonServiceProvider;
+use Snairbef\Regional\RegionalServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,14 +13,14 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'VendorName\\Skeleton\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Snairbef\\Regional\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
     protected function getPackageProviders($app)
     {
         return [
-            SkeletonServiceProvider::class,
+            RegionalServiceProvider::class,
         ];
     }
 
@@ -28,9 +28,21 @@ class TestCase extends Orchestra
     {
         config()->set('database.default', 'testing');
 
-        /*
-        $migration = include __DIR__.'/../database/migrations/create_skeleton_table.php.stub';
-        $migration->up();
-        */
+        $this->migration();
+    }
+
+    protected function migration()
+    {
+        $migration_province = include __DIR__.'/../database/migrations/create_provinces_table.php.stub';
+        $migration_province->up();
+
+        $migration_regency = include __DIR__.'/../database/migrations/create_regencies_table.php.stub';
+        $migration_regency->up();
+
+        $migration_district = include __DIR__.'/../database/migrations/create_districts_table.php.stub';
+        $migration_district->up();
+
+        $migration_sub_district = include __DIR__.'/../database/migrations/create_sub_districts_table.php.stub';
+        $migration_sub_district->up();
     }
 }
