@@ -14,10 +14,10 @@ it('importing province records', function () {
 
     $import = $province->import([
         'id' => 1,
-        'name'  =>  'Jawa Barat',
-        'status'    =>  true,
-        'created_at'    =>  now(),
-        'updated_at'    =>  now(),
+        'name' => 'Jawa Barat',
+        'status' => true,
+        'created_at' => now(),
+        'updated_at' => now(),
     ]);
 
     expect($import)->toBeBool();
@@ -28,11 +28,11 @@ it('importing regency records', function () {
 
     $import = $regency->import([
         'id' => 100,
-        'province_id'   =>  1,
-        'name'  =>  'Kota Bandung',
-        'status'    =>  true,
-        'created_at'    =>  now(),
-        'updated_at'    =>  now(),
+        'province_id' => 1,
+        'name' => 'Kota Bandung',
+        'status' => true,
+        'created_at' => now(),
+        'updated_at' => now(),
     ]);
 
     expect($import)->toBeBool();
@@ -43,26 +43,26 @@ it('importing district records', function () {
 
     $import = $district->import([
         'id' => 100,
-        'regency_id'   =>  1,
-        'name'  =>  'Sukajadi',
-        'status'    =>  true,
-        'created_at'    =>  now(),
-        'updated_at'    =>  now(),
+        'regency_id' => 1,
+        'name' => 'Sukajadi',
+        'status' => true,
+        'created_at' => now(),
+        'updated_at' => now(),
     ]);
 
     expect($import)->toBeBool();
 });
 
 it('importing sub district records', function () {
-    $sub_district = new SubDistrict(new ModelsSubDistrict());
+    $sub_district = new SubDistrict(new ModelsSubDistrict);
 
     $import = $sub_district->import([
         'id' => 100,
-        'district_id'   =>  1,
-        'name'  =>  'Sukabungah',
-        'status'    =>  true,
-        'created_at'    =>  now(),
-        'updated_at'    =>  now(),
+        'district_id' => 1,
+        'name' => 'Sukabungah',
+        'status' => true,
+        'created_at' => now(),
+        'updated_at' => now(),
     ]);
 
     expect($import)->toBeBool();

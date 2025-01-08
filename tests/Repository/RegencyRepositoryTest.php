@@ -6,13 +6,13 @@ it('inserting via repository', function () {
     $repository = app(RegencyRepository::class);
 
     $repository->create([
-        'province_id'   =>  1,
-        'name'  =>  'Kota Bandung'
+        'province_id' => 1,
+        'name' => 'Kota Bandung',
     ]);
 
     $this->assertDatabaseHas('regencies', [
-        'province_id'   =>  1,
-        'name'  =>  'Kota Bandung'
+        'province_id' => 1,
+        'name' => 'Kota Bandung',
     ]);
 });
 
@@ -20,8 +20,8 @@ it('updating via repository', function () {
     $repository = app(RegencyRepository::class);
 
     $province = $repository->create([
-        'province_id'   =>  1,
-        'name'  =>  'Kota Bandung'
+        'province_id' => 1,
+        'name' => 'Kota Bandung',
     ]);
 
     $repository->update($province->id, ['province_id' => 1, 'name' => 'Kota Bandung']);
@@ -33,8 +33,8 @@ it('deleting via repository', function () {
     $repository = app(RegencyRepository::class);
 
     $province = $repository->create([
-        'province_id'   =>  1,
-        'name'  =>  'Kota Bandung'
+        'province_id' => 1,
+        'name' => 'Kota Bandung',
     ]);
 
     $repository->delete($province->id);
@@ -46,8 +46,8 @@ it('soft deleting via repository', function () {
     $repository = app(RegencyRepository::class);
 
     $province = $repository->create([
-        'province_id'   =>  1,
-        'name'  =>  'Kota Bandung'
+        'province_id' => 1,
+        'name' => 'Kota Bandung',
     ]);
 
     $repository->delete($province->id);
