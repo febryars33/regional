@@ -10,29 +10,21 @@ abstract class Reader
 {
     /**
      * The columns of the reader.
-     *
-     * @var array
      */
     public array $columns = [];
 
     /**
      * The path of the file.
-     *
-     * @var string
      */
     public string $path = '';
 
     /**
      * The model instance.
-     *
-     * @var Model
      */
     protected Model $model;
 
     /**
      * The uppercase flag.
-     *
-     * @var boolean
      */
     public bool $uppercase = true;
 
@@ -54,9 +46,6 @@ abstract class Reader
 
     /**
      * Insert or ignore a new record into the model's table.
-     *
-     * @param  array  $value
-     * @return bool
      */
     public function import(array $value): bool
     {
