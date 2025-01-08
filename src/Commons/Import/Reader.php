@@ -8,12 +8,32 @@ use League\Csv\Reader as CsvReader;
 
 abstract class Reader
 {
+    /**
+     * The columns of the reader.
+     *
+     * @var array
+     */
     public array $columns = [];
 
+    /**
+     * The path of the file.
+     *
+     * @var string
+     */
     public string $path = '';
 
+    /**
+     * The model instance.
+     *
+     * @var Model
+     */
     protected Model $model;
 
+    /**
+     * The uppercase flag.
+     *
+     * @var boolean
+     */
     public bool $uppercase = true;
 
     public function __construct(Model $model)
@@ -32,7 +52,13 @@ abstract class Reader
         return $reader;
     }
 
-    public function import(array $value)
+    /**
+     * Insert or ignore a new record into the model's table.
+     *
+     * @param  array  $value
+     * @return bool
+     */
+    public function import(array $value): bool
     {
         return $this->model::query()->insertOrIgnore($value);
     }
