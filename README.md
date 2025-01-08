@@ -1,8 +1,8 @@
 # Indonesian Regional
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/snairbef/regional.svg?style=flat-square)](https://packagist.org/packages/snairbef/regional)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/snairbef/regional/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/snairbef/regional/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/snairbef/regional/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/snairbef/regional/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/febryars33/regional/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/snairbef/regional/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/febryars33/regional/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/snairbef/regional/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/snairbef/regional.svg?style=flat-square)](https://packagist.org/packages/snairbef/regional)
 
 Indonesian Regional Dependency adalah package Laravel yang dirancang untuk mempermudah pengelolaan data wilayah Indonesia, seperti provinsi, kabupaten/kota, kecamatan, hingga kelurahan. Package ini menyediakan model siap pakai, relasi bawaan, serta fungsi untuk mengimpor data wilayah ke dalam database Anda menggunakan file CSV yang disertakan (provinces.csv, regencies.csv, districts.csv, sub_districts.csv).
