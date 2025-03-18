@@ -9,5 +9,5 @@ use Snairbef\Regional\Concerns\Regions\BelongsTo\HasSubDistrict;
 
 trait HasRegionRelations
 {
-    use HasProvince, HasRegency, HasDistrict, HasSubDistrict;
+    use HasDistrict, HasProvince, HasRegency, HasSubDistrict;
 }
