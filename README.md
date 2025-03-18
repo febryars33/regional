@@ -25,17 +25,16 @@ You can install the package via composer:
 composer require snairbef/regional
 ```
 
-You can publish and run the migrations with:
+Now you can install the package to Laravel Project:
 
 ```bash
-php artisan regional:publish --tag="regional-migrations"
-php artisan migrate
+php artisan regional:install
 ```
 
-You can publish the config file with:
+You can run the migrations with:
 
 ```bash
-php artisan regional:publish --tag="regional-config"
+php artisan migrate
 ```
 
 You can import data from the csv that we have provided:
