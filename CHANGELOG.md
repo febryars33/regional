@@ -2,6 +2,10 @@
 
 All notable changes to `regional` will be documented in this file.
 
+## v1.2.0 - 2025-03-18
+
+**Full Changelog**: https://github.com/febryars33/regional/commits/v1.2.0
+
 ## v1.1.0 - 2025-01-08
 
 ### What's Changed
