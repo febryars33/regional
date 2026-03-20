@@ -2,6 +2,30 @@
 
 All notable changes to `regional` will be documented in this file.
 
+## v2.0.0 - Laravel 12 & 13 Support - 2026-03-20
+
+### 🚨 Breaking Changes
+
+- Drop support for Laravel 11
+
+### ✨ Features
+
+- Add support for Laravel 12
+- Add support for Laravel 13
+
+### 🔧 Improvements
+
+- Update dependency constraints to support latest Laravel versions
+- Simplify CI workflow and dependency resolution
+
+### 🧹 Cleanup
+
+- Remove Larastan due to incompatibility with Laravel 12/13
+
+### ⚠️ Notes
+
+- Laravel 13 is supported at the dependency level, but CI testing is temporarily limited to Laravel 12 due to ecosystem compatibility (Testbench support pending)
+
 ## Support Laravel 13.x - 2026-03-20
 
 ### What's Changed
